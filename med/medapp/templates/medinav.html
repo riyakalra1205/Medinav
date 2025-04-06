@@ -1,0 +1,107 @@
+{% load static %} <!-- Load the static template tag library -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicine</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  body {
+    margin: 0; 
+    height: 100vh; 
+    background-image: url("{% static 'images/med.png' %}"); 
+    background-size:cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    font-family: sans-serif; 
+  }
+  .img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:200px;
+    height:200px;
+  }
+  .bgi{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  h1 {
+    color:#3C9563;
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 14%;
+    font-size: 3em;
+  }
+  table, th, td {
+    border: 3px solid black;
+    text-align: center;
+    margin-left: 12%;
+    margin-top: 10%;
+  }
+  th, td {
+    padding: 15px;
+  }
+  th {
+    color: #3C9563;
+    font-size: 1.5em;
+  }
+  td {
+    color: brown;
+    font-size: 1.5em;}
+  
+  @media(max-width: 1189px) {
+    h1 {
+      font-size: 3em; 
+      margin-left: 20%;
+    }
+    table {
+      width: 90%; 
+      margin-left: 5%;
+      margin-top: 15%;
+    }
+    th, td {
+      font-size: 1em; 
+    }
+  }
+
+</style>
+</head>
+<body>
+
+    <h1> Medication Name: {{ medication_name }}</h1>
+    
+    <table>
+      <tr>
+        <th>S.NO</th>
+        <th>PHARMACY</th>
+        <th>PRICE</th>
+        <th>COUPON CODE</th>
+        <th>DOSAGE</th>
+        <th>QUANTITY</th>
+        <th>LOCATION</th>
+      </tr>
+
+      {% for data in prices %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ data.pharmacy }}</td>
+        <td>{{ data.price }}</td>
+        <td>{{ data.coupon_code }}</td>
+        <td>{{ data.dosage }}</td>
+        <td>{{ data.quantity }}</td>
+        <td>{{ data.location }}</td>
+      </tr>
+      {% endfor %}
+      
+    </table>
+   
+    <div class="img">
+      <img src="{% static 'images/bgi.png' %}" alt="bgi" class="bgi">
+    </div>
+    
+
+</body>
+</html>

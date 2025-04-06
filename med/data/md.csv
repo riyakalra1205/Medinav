@@ -1,0 +1,61 @@
+Name,Pharmacy,Price,coupon_code,Dosage,Quantity,Location
+Acetaminophen,Apollo Pharmacy,449.50,NONE,500mg,100 tablets,Mumbai
+Acetaminophen,MedPlus,474.50,NONE,500mg,100 tablets,Mumbai
+Acetaminophen,Wellness Forever,399.50,WF-ACETA-10,500mg,100 tablets,Mumbai
+Ibuprofen,Apollo Pharmacy,524.50,NONE,200mg,100 tablets,Delhi
+Ibuprofen,MedPlus,599.50,MP-IBU-5,200mg,100 tablets,Delhi
+Ibuprofen,Wellness Forever,499.50,NONE,200mg,100 tablets,Delhi
+Amoxicillin,Apollo Pharmacy,750.00,NONE,500mg,30 capsules,Bangalore
+Amoxicillin,MedPlus,825.00,MP-AMOXI-10,500mg,30 capsules,Bangalore
+Amoxicillin,Wellness Forever,712.50,WF-AMOX-5,500mg,30 capsules,Bangalore
+Lisinopril,Apollo Pharmacy,337.50,NONE,10mg,30 tablets,Chennai
+Lisinopril,MedPlus,362.50,NONE,10mg,30 tablets,Chennai
+Lisinopril,Wellness Forever,299.50,WF-LISI-15,10mg,30 tablets,Chennai
+Atorvastatin,Apollo Pharmacy,625.00,AP-ATORV-20,20mg,30 tablets,Kolkata
+Atorvastatin,MedPlus,687.50,NONE,20mg,30 tablets,Kolkata
+Atorvastatin,Wellness Forever,599.50,WF-ATORV-10,20mg,30 tablets,Kolkata
+Metformin,Apollo Pharmacy,275.00,NONE,500mg,60 tablets,Hyderabad
+Metformin,MedPlus,300.00,MP-MET-5,500mg,60 tablets,Hyderabad
+Metformin,Wellness Forever,249.50,WF-MET-10,500mg,60 tablets,Hyderabad
+Prednisone,Apollo Pharmacy,462.50,NONE,5mg,30 tablets,Pune
+Prednisone,MedPlus,537.50,MP-PRED-5,5mg,30 tablets,Pune
+Prednisone,Wellness Forever,425.00,NONE,5mg,30 tablets,Pune
+Amlodipine,Apollo Pharmacy,390.00,NONE,5mg,30 tablets,Jaipur
+Amlodipine,MedPlus,425.00,NONE,5mg,30 tablets,Jaipur
+Amlodipine,Wellness Forever,360.00,WF-AMLOD-10,5mg,30 tablets,Jaipur
+Omeprazole,Apollo Pharmacy,575.00,NONE,20mg,30 capsules,Ahmedabad
+Omeprazole,MedPlus,637.50,NONE,20mg,30 capsules,Ahmedabad
+Omeprazole,Wellness Forever,549.50,WF-OMEP-5,20mg,30 capsules,Ahmedabad
+Losartan,Apollo Pharmacy,407.50,NONE,50mg,30 tablets,Lucknow
+Losartan,MedPlus,450.00,MP-LOSART-10,50mg,30 tablets,Lucknow
+Losartan,Wellness Forever,375.00,WF-LOSART-5,50mg,30 tablets,Lucknow
+Simvastatin,Apollo Pharmacy,540.00,AP-SIMVA-15,20mg,30 tablets,Cochin
+Simvastatin,MedPlus,600.00,NONE,20mg,30 tablets,Cochin
+Simvastatin,Wellness Forever,499.50,WF-SIMVA-10,20mg,30 tablets,Cochin
+Montelukast,Apollo Pharmacy,710.00,NONE,10mg,30 tablets,Chandigarh
+Montelukast,MedPlus,775.00,MP-MONT-5,10mg,30 tablets,Chandigarh
+Montelukast,Wellness Forever,675.00,WF-MONT-10,10mg,30 tablets,Chandigarh
+Hydrochlorothiazide,Apollo Pharmacy,345.00,NONE,25mg,30 tablets,Nagpur
+Hydrochlorothiazide,MedPlus,375.00,NONE,25mg,30 tablets,Nagpur
+Hydrochlorothiazide,Wellness Forever,312.50,WF-HCTZ-10,25mg,30 tablets,Nagpur
+Gabapentin,Apollo Pharmacy,587.50,NONE,300mg,90 capsules,Indore
+Gabapentin,MedPlus,650.00,MP-GABA-5,300mg,90 capsules,Indore
+Gabapentin,Wellness Forever,550.00,WF-GABA-10,300mg,90 capsules,Indore
+Escitalopram,Apollo Pharmacy,820.00,NONE,10mg,30 tablets,Surat
+Escitalopram,MedPlus,887.50,MP-ESCITA-10,10mg,30 tablets,Surat
+Escitalopram,Wellness Forever,775.00,WF-ESCITA-5,10mg,30 tablets,Surat
+Tramadol,Apollo Pharmacy,605.00,AP-TRAMA-10,50mg,30 tablets,Kanpur
+Tramadol,MedPlus,675.00,NONE,50mg,30 tablets,Kanpur
+Tramadol,Wellness Forever,575.00,WF-TRAMA-5,50mg,30 tablets,Kanpur
+Sertraline,Apollo Pharmacy,795.00,NONE,50mg,30 tablets,Patna
+Sertraline,MedPlus,862.50,NONE,50mg,30 tablets,Patna
+Sertraline,Wellness Forever,750.00,WF-SERTR-5,50mg,30 tablets,Patna
+Fluoxetine,Apollo Pharmacy,725.00,NONE,20mg,30 capsules,Bhopal
+Fluoxetine,MedPlus,787.50,NONE,20mg,30 capsules,Bhopal
+Fluoxetine,Wellness Forever,695.00,WF-FLUOX-5,20mg,30 capsules,Bhopal
+Trazodone,Apollo Pharmacy,510.00,NONE,50mg,30 tablets,Visakhapatnam
+Trazodone,MedPlus,575.00,NONE,50mg,30 tablets,Visakhapatnam
+Trazodone,Wellness Forever,487.50,WF-TRAZ-5,50mg,30 tablets,Visakhapatnam
+Citalopram,Apollo Pharmacy,685.00,NONE,20mg,30 tablets,Thiruvananthapuram
+Citalopram,MedPlus,750.00,MP-CITA-5,20mg,30 tablets,Thiruvananthapuram
+Citalopram,Wellness Forever,650.00,WF-CITA-10,20mg,30 tablets,Thiruvananthapuram

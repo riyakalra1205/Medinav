@@ -1,0 +1,462 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>MEDINAV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  
+  
+  body {
+    margin: 0; 
+    height: 110vh; 
+    background-image: url("{% static 'images/123.png' %}"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    font-family: sans-serif; 
+  }
+  .flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 30px;
+    flex-wrap: wrap;
+    
+    
+  }
+  .imgbgi{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:250px;
+    height:250px;
+  }
+  .bgi{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .img{
+    position: fixed;
+    bottom: 15px;
+    left: 20px;
+    width:250px;
+    height:250px;
+  }
+  .c1{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+
+
+  .container {
+    position: relative; 
+    height: 100%; 
+    width: 100%; 
+  }
+
+
+  .button-container {
+    position: absolute; 
+    top: 70px; 
+    right: 50px; 
+    z-index: 10; 
+  }
+
+  .my-button {
+    background-color:#4cb372; 
+    border: none;
+    color: white;
+    padding: 20px 54px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+  }
+
+  .my-button:hover {
+    background-color: #3e8e41; }
+
+  .search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; 
+    align-items: center;
+    width: 80%;
+    max-width: 500px; 
+  }
+
+  .search-box {
+    padding: 36px; 
+    margin: 0; 
+    box-sizing: border-box;
+    border: 2px solid #4cb372; 
+    border-right: none; 
+    border-radius: 50px 0 0 50px; 
+    font-size: 16px;
+    width: 153%; 
+    outline:none;
+  }
+
+  .search-button {
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    background-color:#4cb372; 
+    border: 2px solid #4cb372; 
+    color: white;
+    padding: 36px 40px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0; 
+    transition: background-color 0.3s ease;
+    margin: 0; 
+    white-space: nowrap; 
+  }
+
+  .search-button:hover {
+    background-color: #005f73;
+  }
+
+
+
+  
+  .content {
+    
+    margin-top: 6%;
+    margin-left: 40%;
+    
+    transform: translate(-50%, -50%);
+    color:#4cb372;
+    font-style: normal;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 24px;
+    padding: 20px;
+   
+    border-radius: 10px;
+  }
+  .content p{
+    color: black;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Winky Sans', sans-serif;
+
+  }
+ 
+ .chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+
+  .chatbot-button {
+    background-color:#4cb372;
+    border: none;
+    color: white;
+    padding: 50px 60px;
+    text-align:center;
+    text-decoration: none;
+    display: flex; 
+    align-items: center; 
+    justify-content:center; 
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: width 0.3s ease, border-radius 0.3s ease; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .chatbot-button:hover {
+    width: 250px; 
+    border-radius: 5px; 
+    background-color: #1e8bc3;
+  }
+
+  .chatbot-button i {
+    margin-right: 10px;
+    font-size: 24px; 
+  }
+
+  .chatbot-button span {
+    display: none;  
+  }
+
+  .chatbot-button:hover span {
+    display: inline; 
+  }
+
+ @media (max-width: 1155px) {
+    .imgbgi{
+      width:20%;
+      height:20%;
+    }
+    .img{
+    width:0;
+    height:0;
+    }
+  
+    .content {
+      margin-top: 10%;
+      margin-left: 55%;
+      font-size: 24px;  
+      padding: 30px;
+      width: 100%; 
+    }
+    .my-button {
+      position:fixed;
+      bottom: 10px;
+      left:10px;
+      width: 20%;
+      padding: 10px 20px;  
+      font-size: 14px;
+    }
+    
+  } 
+  @media (max-width: 815px) {
+    .search-container {
+      top: 50%; 
+      width: 50%;
+    }
+    .search-box {
+      width: 100%; 
+      padding: 20px; 
+      font-size: 20px; 
+      
+    }
+    .search-button {
+      padding: 20px; 
+      font-size: 20px; 
+      width: 50%;
+      
+    }
+  }
+
+  @media (max-width: 480px) {
+    .chatbot-button {
+      width: 50px;  
+      height: 50px;
+    }
+
+    .chatbot-button i {
+        font-size: 20px;
+    }
+
+    .chatbot-button:hover {
+        width: 100px;
+    }
+  
+  
+  }
+  .chatbot-popup {
+       position: fixed;
+       bottom: 125px;
+       right: 20px;
+       width: 350px;
+       height: 400px;
+       background-color: #fff;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+       display: none; 
+       z-index: 101;
+     }
+
+     .chatbot-popup.show {
+       display: block;
+     }
+
+     .chatbot-header {
+       background-color: #4cb372;
+       color: white;
+       padding: 10px;
+       text-align: center;
+       border-radius: 5px 5px 0 0;
+     }
+
+     .chatbot-body {
+       padding: 10px;
+       height: 300px;
+       overflow-y: scroll; 
+     }
+
+     .chatbot-footer {
+       padding: 10px;
+       border-top: 1px solid #eee;
+       text-align: center;
+     }
+
+     .chatbot-input {
+       width: 70%;
+      padding: 6px;
+       
+       border: 1px solid #ccc;
+       border-radius: 3px;
+     }
+
+     .chatbot-send {
+       background-color: #4cb372;
+       color: white;
+       padding: 6px 12px;
+       margin-bottom: 20px;
+       border: none;
+       border-radius: 3px;
+       cursor: pointer;
+     }
+
+     .message {
+       padding: 8px;
+       margin-bottom: 5px;
+       border-radius: 5px;
+     }
+
+     .user-message {
+       background-color: #e2f7ff;
+       text-align: right;
+     }
+
+     .bot-message {
+       background-color: #f0f0f0;
+       text-align: left;
+     }
+   
+
+</style>
+</head>
+<body>
+
+  <div class="flexbox">
+    <div class="container">
+      <div class="button-container">
+        <a href="{% url 'consultation_page' %}" class="my-button">Book A Consultation</a>
+      </div>
+    </div>
+    <div class="content">
+        <h1>WELCOME TO MEDINAV</h1>
+        <p>One Stop Destination For All Your Healthcare Needs</p>
+    </div>
+    <div class="imgbgi">
+      <img src="{% static 'images/bgi.png' %}" alt="bgi" class="bgi">
+    </div>
+  </div>
+  <div class="img">
+    <img src="{% static 'images/c1.png' %}" alt="c1" class="c1">
+  </div>
+
+    
+
+  <div class="search-container">
+    <form method="POST" action="{% url 'search' %}">
+    {% csrf_token %}
+      <input name="medication_name" type="text" class="search-box" placeholder="Enter your Medicine Name...">
+      <button class="search-button">Search</button>
+    </form>
+    </div>
+  
+  <div class="chatbot-container">
+    <button id="chatbotButton" class="chatbot-button">
+      <i class="fas fa-robot"></i><span>  AI MEDICAL ASSISTANT</span>
+    </button>
+  </div>
+
+ 
+  <div id="chatbotPopup" class="chatbot-popup">
+    <div class="chatbot-header">
+      AI Medical Assistant
+    </div>
+    <div id="chatbotBody" class="chatbot-body">
+     
+    </div>
+    <div class="chatbot-footer">
+      <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Type your message...">
+      <button id="chatbotSend" class="chatbot-send">Send</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const chatbotButton = document.getElementById('chatbotButton');
+      const chatbotPopup = document.getElementById('chatbotPopup');
+      const chatbotBody = document.getElementById('chatbotBody');
+      const chatbotInput = document.getElementById('chatbotInput');
+      const chatbotSend = document.getElementById('chatbotSend');
+
+      chatbotButton.addEventListener('click', function() {
+        chatbotPopup.classList.toggle('show');
+      });
+
+      chatbotSend.addEventListener('click', function() {
+        const message = chatbotInput.value;
+        if (message.trim() !== '') {
+          displayMessage(message, 'user');
+          chatbotInput.value = '';
+          sendMessageToAI(message);
+        }
+      });
+
+      function displayMessage(message, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', sender + '-message');
+        messageDiv.textContent = message;
+        chatbotBody.appendChild(messageDiv);
+        chatbotBody.scrollTop = chatbotBody.scrollHeight; 
+      }
+
+      function sendMessageToAI(message) {
+        fetch('/get_ai_response/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+          },
+          body: JSON.stringify({ 'message': message })
+        })
+        .then(response => response.json())
+        .then(data => {
+          displayMessage(data.response, 'bot');
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          displayMessage("Sorry, I'm having trouble connecting to the AI.", 'bot');
+        });
+      }
+
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+    });
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONSULT</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  body {
+    margin: 0; 
+    height: 100vh; 
+    background-image: url("{% static 'images/1.png' %}"); 
+    
+    background-size:cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    font-family: sans-serif; 
+}
+
+  .img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:200px;
+    height:200px;
+  }
+  .bgi{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+    h1 {
+        color:#3C9563;
+        text-align: center;
+        margin-top: 8%;
+        margin-left: 10%;
+        font-size: 2.5em;
+    }
+    h2 {
+        color: black;
+        
+        margin-top: 8%;
+        margin-left: 5%;
+        font-size: 2em;
+    }
+    form{
+        text-align: center;
+        margin-top: 3%;
+        margin-left: 10%;
+    }
+    label {
+        color: black;
+        font-size: 1.5em;
+    }
+    input {
+        font-size: 1.5em;
+    }
+    button {
+        font-size: 1.5em;
+        background-color: #4cb372;
+        color: white;
+        padding: 10px 20px;
+        margin-left: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    table, th, td {
+        border: 3px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        margin-top: 9%;
+        margin-left: 14%;
+       
+    }
+    th, td {
+        padding: 15px;
+    }
+    th {
+        color: #3C9563;
+        font-size: 1.5em;
+    }
+    td {
+        color: brown;
+        font-size: 1.5em;}
+    @media(max-width: 1189px) {
+        h1 {
+            font-size: 3em; 
+            margin-left: 20%;
+        }
+        table {
+            width: 90%; 
+            margin-left: 5%;
+            margin-top: 15%;
+        }
+        th, td {
+            font-size: 1em; 
+        }
+    }
+</style>
+</head>
+<body>
+    <h1> BOOK YOUR CONSULTATION !!</h1>
+    <form method="POST" action="">
+      {% csrf_token %}
+      <label for="location">Enter Location:</label>
+      <input type="text" id="location" name="location">
+      <button type="submit">Search</button>
+  </form>
+
+  {% if doctors %}
+    
+      <table>
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Specialty</th>
+                  <th>Location</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for doctor in doctors %}
+                  <tr>
+                      <td>{{ doctor.Name }}</td>
+                      <td>{{ doctor.Specialty }}</td>
+                      <td>{{ doctor.Location }}</td>
+                      <td>{{ doctor.Phone }}</td>
+                      <td>{{ doctor.Email }}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  {% endif %}
+  <div class="img">
+    <img src="{% static 'images/bgi.png' %}" alt="bgi" class="bgi">
+  </div>
+    
+</body>
+</html>
